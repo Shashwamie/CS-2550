@@ -15,17 +15,17 @@
                 </div>
                 <nav>
                     <h2>Home</h2>
-                    <div class="drop-menu" id="drop-menu-home" onclick="doDropHome()">
+                    <div class="drop-menu" id="drop-menu-home" onclick="doDrop('drop-items-home')">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                     <ul class="drop-items" id="drop-items-home">
-                        <li onclick="goHome()">Home</li>
-                        <li onclick="goFavorite()">Favorite Game</li>
-                        <li onclick="goUpcoming()">Upcoming Games</li>
-                        <li onclick="goCompleted()">Completed Games</li>
-                        <li onclick="goAbout()">About</li>
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
                     </ul>
                 </nav>
             </header>
@@ -61,17 +61,17 @@
                 </div>
                 <nav>
                     <h2>Favorite</h2>
-                    <div class="drop-menu" id="drop-menu-favorite" onclick="doDropFavorite()">
+                    <div class="drop-menu" id="drop-menu-favorite" onclick="doDrop('drop-items-favorite')">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                     <ul class="drop-items" id="drop-items-favorite">
-                        <li onclick="goHome()">Home</li>
-                        <li onclick="goFavorite()">Favorite Game</li>
-                        <li onclick="goUpcoming()">Upcoming Games</li>
-                        <li onclick="goCompleted()">Completed Games</li>
-                        <li onclick="goAbout()">About</li>
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
                     </ul>
                 </nav>
             </header>
@@ -80,15 +80,15 @@
                 <iframe id="vid" width="960" height="540" src="https://www.youtube.com/embed/2Crk_GpxGQE?si=dZqmQFH8oVdPXCsE&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </article>
             <aside class="cards" id="cards">
-                <div class="info-card" onclick="doPop1()" id="card1">
+                <div class="info-card" onclick="doPop('card1', 'text1')" id="card1">
                     <p>Reason 1:</p><br>
                     <p class="text" id="text1">It's a dreary coldblooded masterpiece. The setting in bloodborne is unlike anything I had ever seen, it was the nightmare fuel that we had been looking for. Every area of the game is just undeniably creepy.</p>
                 </div>
-                <div class="info-card" onclick="doPop2()" id="card2">
+                <div class="info-card" onclick="doPop('card2', 'text2')" id="card2">
                     <p>Reason 2:</p><br>
                     <p class="text" id="text2">Around every corner is a new beast that you would never be able to imagine yourself. The designs of mosters is just a beutiful horror in of itself.</p>
                 </div>
-                <div class="info-card" onclick="doPop3()" id="card3">
+                <div class="info-card" onclick="doPop('card3', 'text3')" id="card3">
                     <p>Reason 3:</p><br>
                     <p class="text">Fasion</p><br>
                     <p class="text" id="text3">Not much else to say besides that this game has style. From the cloths you wear to how you swing an axe this game will ooze of its fassion souls like non other.</p>
@@ -120,17 +120,17 @@
                 </div>
                 <nav>
                     <h2>About</h2>
-                    <div class="drop-menu" id="drop-menu-about" onclick="doDropAbout()">
+                    <div class="drop-menu" id="drop-menu-about" onclick="doDrop('drop-items-about')">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                     <ul class="drop-items" id="drop-items-about">
-                        <li onclick="goHome()">Home</li>
-                        <li onclick="goFavorite()">Favorite Game</li>
-                        <li onclick="goUpcoming()">Upcoming Games</li>
-                        <li onclick="goCompleted()">Completed Games</li>
-                        <li onclick="goAbout()">About</li>
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
                     </ul>
                 </nav>
             </header>
@@ -177,17 +177,17 @@
                 </div>
                 <nav>
                     <h2>Upcoming List</h2>
-                    <div class="drop-menu" id="drop-menu-upcoming" onclick="doDropUpcoming()">
+                    <div class="drop-menu" id="drop-menu-upcoming" onclick="doDrop('drop-items-upcoming')">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                     <ul class="drop-items" id="drop-items-upcoming">
-                        <li onclick="goHome()">Home</li>
-                        <li onclick="goFavorite()">Favorite Game</li>
-                        <li onclick="goUpcoming()">Upcoming Games</li>
-                        <li onclick="goCompleted()">Completed Games</li>
-                        <li onclick="goAbout()">About</li>
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
                     </ul>
                 </nav>
             </header>
@@ -220,17 +220,17 @@
                 </div>
                 <nav>
                     <h2>Completed List</h2>
-                    <div class="drop-menu" id="drop-menu-completed" onclick="doDropCompleted()">
+                    <div class="drop-menu" id="drop-menu-completed" onclick="doDrop('drop-items-completed')">
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
                     <ul class="drop-items" id="drop-items-completed">
-                        <li onclick="goHome()">Home</li>
-                        <li onclick="goFavorite()">Favorite Game</li>
-                        <li onclick="goUpcoming()">Upcoming Games</li>
-                        <li onclick="goCompleted()">Completed Games</li>
-                        <li onclick="goAbout()">About</li>
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
                     </ul>
                 </nav>
             </header>
