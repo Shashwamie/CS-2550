@@ -1,0 +1,331 @@
+* {color:white; margin: 0; padding: 0; box-sizing: border-box;}
+html{font-size: 100%}
+@font-face {
+    font-family: warrior;
+    src: url(knight-warrior-font/KnightWarrior-w16n8.otf);
+}
+@font-face {
+    font-family: bruce;
+    src: url(bruce-forever-font/BruceForeverRegular-X3jd2.ttf);
+}
+@font-face {
+    font-family: venite;
+    src: url(venite-adoremus-font/VeniteAdoremus-rgRBA.ttf);
+}
+body{
+    min-height: 100vh;
+    background-image: radial-gradient(circle at top, rgb(51, 6, 57) 10%, black);
+}
+.home-page{
+    display: block;
+    min-height: 100vh; 
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.screen-name{
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+nav{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 2rem;
+}
+nav h2{
+    font-size: 1.4rem;
+    cursor: pointers;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.screen-name img{
+    transform: rotate(-15deg);
+}
+h1{
+    font-family: bruce;
+    font-size: 2.8rem;
+    text-shadow: .2rem .2rem rgb(76, 75, 75);
+    color: rgb(5, 210, 210);
+}
+.drop-menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 20%;
+}
+.drop-menu div{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+}
+.drop-menu:hover{
+    transform: scale(1.3);
+}
+.drop-items{
+    display: none;
+    position: absolute;
+    top: 7rem;
+    background-color: #2a2828e3;
+    min-width: 15rem;
+    box-shadow: 0rem .8rem 1.16rem 0rem rgba(104, 34, 34, 0.2);
+    z-index: 1;
+    right: 2rem;
+}
+.drop-items li{
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 2px solid black;
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.drop-items li:hover{
+    background-color: #77757591;
+    cursor: pointer;
+}
+article{
+    position: relative;
+    display: flex;
+    text-align: left;
+    margin: 2rem;
+}
+article p{
+    padding: 1rem;
+    font-size: 3.5rem;
+    text-indent: 2.5rem;
+    text-shadow: .1rem .1rem rgb(154, 154, 154);
+    font-family: Georgia;
+}
+article img{
+    height: 40rem;
+}
+article h3{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 2rem;
+}
+article h2{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 11rem;
+}
+footer{
+    position: relative;
+    margin: 3rem;
+    padding: .2rem;
+    border-top: .2rem solid rgb(98, 95, 95);
+}
+footer a{
+    padding: .2rem;
+    color: rgb(181, 179, 179);
+}
+.links a{
+    cursor: pointer;
+}
+.links a:hover{
+    color: white;
+}
+footer img{
+    position: absolute;
+    left: 90%;
+    bottom: 15%;
+}
+footer h1{
+    position: absolute;
+    left: 90%;
+    bottom: 2%;
+}
+
+@media  screen and (max-width: 1200px) {
+    html{font-size: 80%}
+    .drop-items{
+        min-width: 15rem;
+        right: 3rem;
+        top: 9rem;
+    }
+    .drop-items li{
+        font-size: 2rem;
+    }
+}
+@media  screen and (max-width: 1000px) {
+    html{font-size: 65%}
+    .drop-menu{
+        width: 3rem;
+    }
+    .logo{
+        width: 100px
+    }
+}
+@media screen and (max-width: 800px){
+    html{font-size: 50%}
+    nav h2{
+        display: none;
+    }
+    .drop-menu{
+        width: 4rem;
+    }
+    footer{
+        display: none;
+    }
+}
+
+
+
+.favorite-page{
+    display: none;
+    min-height: 100vh;
+}
+.favorite-page article{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 2rem;
+    overflow: hidden;
+}
+iframe{
+    margin: 2rem auto;
+    width: 60rem;
+    height: 33.75rem;
+}
+.favorite-page article h2{
+    position: relative;
+    color: white;
+    font-size: 11rem;
+}
+.favorite-page div{
+    text-align: center;
+}
+.favorite-page div h2{
+    position: relative;
+    color: white;
+    font-size: 6rem;
+}
+.cards{
+    display: flex;
+    justify-content: space-around;
+}
+.info-card{
+    height: 100%;
+    background-color: rgb(21, 15, 35);
+    border: .2rem solid rgb(37, 34, 44);
+    border-radius: 3rem;
+    box-shadow: .1rem .3rem rgb(39, 35, 44);
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    max-width: 20%;
+    padding: 1em;
+}
+
+@media  screen and (max-width: 1000px) {
+    .info-card p{
+        font-size: 1.5rem;
+    }
+    .info-card br{
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+    .cards{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .info-card:hover{
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width: 800px){
+    html{font-size: 50%}
+    nav h2{
+        display: none;
+    }
+    .drop-menu{
+        width: 4rem;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info-card{
+        font-size: 1.8rem;
+    }
+}
+
+
+.about-page{
+    display: none;
+    min-height: 100vh;
+}
+.about-main{
+    display: flex;
+    margin: 2rem;
+}
+.about-page div article{
+    display: block;
+    width: 50%;
+    margin: 2rem;
+}
+.about-page div article h2{ 
+    position: relative;
+    top: 0;
+    font-size: 2rem;
+    margin: 1rem
+}
+.about-page div article p{
+    font-size: 1.5rem;
+    text-shadow: 0px 0px white;
+    margin: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-page div aside{
+    margin: 2rem;
+    width: 50%;
+    padding: 1rem;
+    overflow: visible;
+}
+.johnny{
+    width: 22rem;
+    padding-left: 20%;
+}
+.malenia{
+    width: 32rem;
+}
+.enderman{
+    width: 12rem;
+}
+
+
+
+.upcoming-page{
+    display: none;
+    min-height: 100vh;
+}
+.upcoming-page div article h2{ 
+    position: relative;
+    top: 0;
+    font-size: 11rem;
+    margin: 1rem
+}
+
+
+
+.completed-page{
+    display: none;
+    min-height: 100vh;
+}
+.completed-page div article h2{ 
+    position: relative;
+    top: 0;
+    font-size: 11rem;
+    margin: 1rem
+}
