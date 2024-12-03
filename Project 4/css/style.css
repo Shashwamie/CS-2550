@@ -1,0 +1,569 @@
+/*
+Changes made for Project 4
+-Organized the css to know where things belong and easier to edit
+-Changed the sizing of some containers to make them fit better at media queries
+-Changed about text font size at media queries to make it more readable
+*/
+
+/*Applied to all and imports*/
+* {color:white; margin: 0; padding: 0; box-sizing: border-box;}
+html{font-size: 100%}
+@font-face {
+    font-family: warrior;
+    src: url(knight-warrior-font/KnightWarrior-w16n8.otf);
+}
+@font-face {
+    font-family: bruce;
+    src: url(bruce-forever-font/BruceForeverRegular-X3jd2.ttf);
+}
+@font-face {
+    font-family: venite;
+    src: url(venite-adoremus-font/VeniteAdoremus-rgRBA.ttf);
+}
+body{
+    min-height: 100vh;
+    background-image: radial-gradient(circle at top, rgb(51, 6, 57) 10%, black);
+}
+
+
+
+
+
+
+
+/* Styling applied to general page head elements */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.screen-name{
+    /*Div that contains logo and page title*/
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+.screen-name img{
+    /*transform for logo in the section*/
+    transform: rotate(-15deg);
+}
+h1{
+    /*styling for h1 in the screen name*/
+    font-family: bruce;
+    font-size: 2.8rem;
+    text-shadow: .2rem .2rem rgb(76, 75, 75);
+    color: rgb(5, 210, 210);
+}
+nav{
+    /*Contains hamburger menu and drop down*/
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-right: 2rem;
+}
+nav h2{
+    /*Name of current nav location*/
+    font-size: 1.4rem;
+    cursor: pointers;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.drop-menu{
+    /*Hamburger element to click on*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 20%;
+}
+.drop-menu:hover{
+    transform: scale(1.3);
+}
+.drop-menu div{
+    /*Individul lines in hamburger element*/
+    width: 100%;
+    height: 20%;
+    background-color: white;
+}
+.drop-items{
+    /*ul list that appears when clicked on the hamburger*/
+    display: none;
+    position: absolute;
+    top: 7rem;
+    background-color: #2a2828e3;
+    min-width: 15rem;
+    box-shadow: 0rem .8rem 1.16rem 0rem rgba(104, 34, 34, 0.2);
+    z-index: 1;
+    right: 2rem;
+}
+.drop-items li{
+    /* individula items in the dropdown menu */
+    text-decoration: none;
+    list-style: none;
+    border-bottom: 2px solid black;
+    padding: .5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.drop-items li:hover{
+    background-color: #77757591;
+    cursor: pointer;
+}
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 3.2rem;
+    height: 1.5rem;
+    right: 2rem;
+    top: 0.5rem;
+}
+/* hide checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 1rem;
+    background-color: #8d8a8a;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    left: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #16dc76;
+}
+input:checked + .slider:before {
+    transform: translateX(1.7rem);
+}
+
+
+
+
+
+
+/* Styling applied to general page body elements */
+article{
+    /*container for main content of page*/
+    position: relative;
+    display: flex;
+    text-align: left;
+    margin: 2rem;
+}
+article p{
+    padding: 1rem;
+    font-size: 3.5rem;
+    text-indent: 2.5rem;
+    text-shadow: .1rem .1rem rgb(154, 154, 154);
+    font-family: Georgia;
+}
+article img{
+    height: 40rem;
+}
+article h3{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 2rem;
+}
+article h2{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-size: 11rem;
+}
+
+
+
+
+
+
+/* Styling applied ot eneral page gooter elements */
+footer{
+    position: relative;
+    margin: 3rem;
+    padding: .2rem;
+    border-top: .2rem solid rgb(98, 95, 95);
+}
+footer a{
+    padding: .2rem;
+    color: rgb(181, 179, 179);
+}
+.links a{
+    cursor: pointer;
+}
+.links a:hover{
+    color: white;
+}
+footer img{
+    position: absolute;
+    left: 90%;
+    bottom: 15%;
+}
+footer h1{
+    position: absolute;
+    left: 90%;
+    bottom: 2%;
+}
+
+
+
+
+
+
+/* Media queries applied to the general page elements
+    this affects things like nav, footer, font-size
+    for all pages
+*/
+@media  screen and (max-width: 1200px) {
+    html{font-size: 80%}
+    .drop-items{
+        min-width: 15rem;
+        right: 3rem;
+        top: 9rem;
+    }
+    .drop-items li{
+        font-size: 2rem;
+    }
+    .switch{
+        width: 4rem;
+        height: 1.8rem;
+    }
+    .slider:before{
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    input:checked + .slider:before {
+        transform: translateX(2.25rem);
+    }
+}
+@media  screen and (max-width: 1000px) {
+    html{font-size: 65%}
+    .drop-menu{
+        width: 3rem;
+    }
+    .logo{
+        width: 100px
+    }
+    .switch{
+        width: 4.5rem;
+        height: 2rem;
+    }
+    .slider:before{
+        width: 2rem;
+        height: 2rem;
+    }
+    input:checked + .slider:before {
+        transform: translateX(2.5rem);
+    }
+}
+@media screen and (max-width: 800px){
+    html{font-size: 50%}
+    nav h2{
+        display: none;
+    }
+    .drop-menu{
+        width: 4rem;
+    }
+    footer{
+        display: none;
+    }
+    .switch{
+        width: 4.6rem;
+        height: 2rem;
+    }
+    .slider:before{
+        width: 2rem;
+        height: 2rem;
+    }
+    input:checked + .slider:before {
+        transform: translateX(2.65rem);
+    }
+}
+
+/* media general things for mobile devices */
+@media screen and (max-width: 450px){
+    h1{
+        font-size: 5rem;
+    }
+    footer{
+        display: none;
+    }
+    article{
+        display: block;
+    }
+    article h3{
+        top: 55%;
+    }
+    article h2{
+        top: 60%;
+        font-size: 6rem;
+    }
+    article figure{
+        text-align: center;
+    }
+    article p{
+        margin-top: 5rem;
+    }
+}
+
+
+
+
+
+
+/* Home page specific styling */
+.home-page{
+    display: block;
+    min-height: 100vh; 
+}
+
+
+
+
+
+/* Favorite page specific styling */
+.favorite-page{
+    /* main container for favorite page */
+    display: none;
+    min-height: 100vh;
+}
+.favorite-page article{
+    /* main content for favorite page */
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 2rem;
+    overflow: hidden;
+}
+iframe{
+    margin: 2rem auto;
+    width: 60rem;
+    height: 33.75rem;
+}
+.favorite-page article h2{
+    position: relative;
+    color: white;
+    font-size: 11rem;
+}
+.favorite-page div{
+    text-align: center;
+}
+.favorite-page div h2{
+    position: relative;
+    color: white;
+    font-size: 6rem;
+}
+.cards{
+    /* container that holds all of the cards */
+    display: flex;
+    justify-content: space-around;
+}
+.info-card{
+    /* individul div for each card */
+    height: 100%;
+    background-color: rgb(21, 15, 35);
+    border: .2rem solid rgb(37, 34, 44);
+    border-radius: 3rem;
+    box-shadow: .1rem .3rem rgb(39, 35, 44);
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    max-width: 20%;
+    padding: 1em;
+}
+
+
+
+
+/* Media queries applied to specificaly to favorite page elements
+    this mainly chages the card responisiveness
+*/
+@media  screen and (max-width: 1000px) {
+    .info-card p{
+        font-size: 1.5rem;
+    }
+    .info-card br{
+        display: none;
+    }
+    .text{
+        display: none;
+    }
+    .cards{
+        width: 50%;
+        margin: 0 auto;
+    }
+    .info-card:hover{
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+}
+@media screen and (max-width: 800px){
+    html{font-size: 50%}
+    nav h2{
+        display: none;
+    }
+    .drop-menu{
+        width: 4rem;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info-card{
+        font-size: 1.8rem;
+    }
+}
+@media screen and (max-width: 450px){
+    .favorite-page article h2{
+        font-size: 6rem;
+    }
+    .favorite-page article iframe{
+        width:95%;
+    }
+    .cards{
+        flex-direction: row;
+    }
+    .runner-up{
+        display: none;
+    }
+}
+
+
+
+
+/* About page specific styling */
+.about-page{
+    /* main container for about page */
+    display: none;
+    min-height: 100vh;
+}
+.about-main{
+    /* container that holds all of main content */
+    display: flex;
+    margin: 2rem;
+}
+.about-page div article{
+    /* holds the main article for about page */
+    display: block;
+    width: 50%;
+    margin: 2rem;
+}
+.about-page div article h2{ 
+    position: relative;
+    top: 0;
+    font-size: 2rem;
+    margin: 1rem
+}
+.about-page div article p{
+    font-size: 1.5rem;
+    text-shadow: 0px 0px white;
+    margin: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.about-page div aside{
+    /* the container for all the images in about page */
+    margin: 2rem;
+    width: 50%;
+    padding: 1rem;
+    overflow: visible;
+}
+/* styling for each of the images */
+.johnny{
+    width: 22rem;
+    padding-left: 20%;
+}
+.malenia{
+    width: 32rem;
+}
+.enderman{
+    width: 12rem;
+}
+
+
+@media screen and (max-width: 1000px){
+    .about-page div article p{
+        font-size: 1.8rem;
+    }
+    .about-page div aside{
+        width: 30%;
+    }
+    .about-page div article{
+        width: 70%;
+    }
+}
+@media screen and (max-width: 450px){
+    .about-page .about-main{
+        display: block;
+        text-align: center;
+    }
+    .about-page .about-main .about-article{
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .about-page .about-main .about-article p {
+        font-size: 2rem;
+    }
+    .about-page .about-main .about-aside{
+        text-align: center;
+        width: 100%;
+        margin: 1rem auto;
+    }
+    .about-page .about-main .about-aside h2{
+        font-size: 2rem;
+    }
+}
+
+
+/* Upcoming page specific styling */
+.upcoming-page{
+    display: none;
+    min-height: 100vh;
+}
+.upcoming-page div article h2{ 
+    position: relative;
+    top: 0;
+    font-size: 11rem;
+    margin: 1rem
+}
+
+
+
+/* Completed page specific styling */
+.completed-page{
+    display: none;
+    min-height: 100vh;
+}
+.completed-page div article h2{ 
+    position: relative;
+    top: 0;
+    font-size: 11rem;
+    margin: 1rem
+}
+
+@media screen and (max-width: 450px){
+    .completed-page .completed-article h2{
+        font-size: 10rem;
+    }
+    .upcoming-page .upcoming-article h2{
+        font-size: 10rem;
+    }
+}
