@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game Lists</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+       <section class="home-page" id="Home">
+            <header>
+                <div class="screen-name">
+                    <img src="img/logo2.png" width="150px" class="logo">
+                    <h1>Shashwamie's</h1>
+                    <h1>Games Lists</h1>
+                </div>
+                <nav>
+                    <h2>Home</h2>
+                    <div class="drop-menu" id="drop-menu-home" onclick="doDrop('drop-items-home')">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="drop-items" id="drop-items-home">
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
+                        <li onclick="goTo('Visitor')">Visitor</li>
+                    </ul>
+                    <label class="switch">
+                        <input class="theme-button1" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </nav>
+            </header>
+            <article>
+                <figure>
+                    <img src="./img/geraldFix.png" alt="Geralt of Rivia">
+                    <figcaption>Fig.1 - Geralt, of Rivia.</figcaption>
+                </figure>
+                <div>
+                    <p>I guess i'll play the games so you don't have too - Bryce</p>
+                </div>
+                <h3>Heres</h3>
+                <h2>MYGAMELIST</h2>
+            </article>
+            <footer>
+                <p class="links"><a onclick="goAbout()">About</a></p>
+                <p class="links"><a onclick="goFavorite()">Favorite Game</a></p>
+                <p class="links"><a onclick="goUpcoming()">Upcoming Games</a></p>
+                <p class="links"><a onclick="goCompleted()">Completed Games</a></p>
+                <p class="links"><a onclick="goVisitor()">Visitor</a></p>
+                <br>
+                <p>Designed by Bryce Barbee</p>
+                <p>Developed by Bryce Barbee</p>
+                <img src="img/logo2.png" width="100 px">
+                <h1>SGL</h1>
+            </footer>
+        </section>
+        <section class="favorite-page" id="Favorite">
+            <header>
+                <div class="screen-name">
+                    <img src="img/logo2.png" width="150 px" class="logo">
+                    <h1>Favorite</h1>
+                    <h1>Game</h1>
+                </div>
+                <nav>
+                    <h2>Favorite</h2>
+                    <div class="drop-menu" id="drop-menu-favorite" onclick="doDrop('drop-items-favorite')">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="drop-items" id="drop-items-favorite">
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
+                        <li onclick="goTo('Visitor')">Visitor</li>
+                    </ul>
+                    <label class="switch">
+                        <input class="theme-button2" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </nav>
+            </header>
+            <article>
+                <h2>BLOODBORNE</h2>
+                <iframe id="vid" width="960" height="540" src="https://www.youtube.com/embed/2Crk_GpxGQE?si=dZqmQFH8oVdPXCsE&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </article>
+            <aside class="cards" id="cards">
+                <div class="info-card" onclick="doPop('card1', 'text1')" id="card1">
+                    <p>Reason 1:</p><br>
+                    <p class="text" id="text1">It's a dreary coldblooded masterpiece. The setting in bloodborne is unlike anything I had ever seen, it was the nightmare fuel that we had been looking for. Every area of the game is just undeniably creepy.</p>
+                </div>
+                <div class="info-card" onclick="doPop('card2', 'text2')" id="card2">
+                    <p>Reason 2:</p><br>
+                    <p class="text" id="text2">Around every corner is a new beast that you would never be able to imagine yourself. The designs of mosters is just a beutiful horror in of itself.</p>
+                </div>
+                <div class="info-card" onclick="doPop('card3', 'text3')" id="card3">
+                    <p>Reason 3:</p><br>
+                    <p class="text">Fasion</p><br>
+                    <p class="text" id="text3">Not much else to say besides that this game has style. From the cloths you wear to how you swing an axe this game will ooze of its fassion souls like non other.</p>
+                </div>
+            </aside>
+            <div class="runner-up">
+                <h2>Runner Up</h2>
+                <h2>Cyberpunk 2077</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8X2kIfS6fb8?si=_tWur-bbrrBlUME1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <footer>
+                <p class="links"><a onclick="goAbout()">About</a></p>
+                <p class="links"><a onclick="goFavorite()">Favorite Game</a></p>
+                <p class="links"><a onclick="goUpcoming()">Upcoming Games</a></p>
+                <p class="links"><a onclick="goCompleted()">Completed Games</a></p>
+                <p class="links"><a onclick="goVisitor()">Visitor</a></p>
+                <br>
+                <p>Designed by Bryce Barbee</p>
+                <p>Developed by Bryce Barbee</p>
+                <img src="img/logo2.png" width="100 px">
+                <h1>SGL</h1>
+            </footer>
+       </section>
+       <section class="about-page" id="About">
+            <header>
+                <div class="screen-name">
+                    <img src="img/logo2.png" width="150 px" class="logo">
+                    <h1>About</h1>
+                    <h1>Game Lists</h1>
+                </div>
+                <nav>
+                    <h2>About</h2>
+                    <div class="drop-menu" id="drop-menu-about" onclick="doDrop('drop-items-about')">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="drop-items" id="drop-items-about">
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
+                        <li onclick="goTo('Visitor')">Visitor</li>
+                    </ul>
+                    <label class="switch">
+                        <input class="theme-button3" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </nav>
+            </header>
+            <div class="about-main">
+                <article class="about-article">
+                    <h2>About Bryce</h2>
+                    <p>Hi my name is Bryce but my screen name for pretty much everything is Shashwamie. I couldn't tell you what that is
+                        or what it means, I came up with the word and has now just been me for over a decade. This site however I want to 
+                        start building even futhur upon even after the homework assignment. This was a good start for me to be able to 
+                        get my ideas visualized. I want to create a site that has all of Shashwamie's played games and games he plans to play.
+                        There is a couple of reasons that I wanted to start to build this list idea. First of all yes I am absolulty addicted
+                        to video games, but I do think that I manage it alright. Secondly I love to play such a wide variety of games that I 
+                        can not keep track anymore of what games I played, beat, hated, or adored. So my main goal is to start to build this
+                        page to keep track of the games I play and my opinion about them. Lastly I want to have an upcoming page one day that 
+                        will have a schedule of what I am playing in the future or tend to anyways. This list is already huge and I expect it 
+                        to never stop growing.
+                    </p>
+                </article>
+                <aside class="about-aside">
+                    <h2>My Iconic Characters</h2>
+                    <img src="./img/MaleniaFix.png" class="malenia">
+                    <img src="./img/endermanFix.png" class="enderman">
+                    <img src="./img/johnnyFix.png" class="johnny" alt="Johnny Silverhand">
+                </aside>
+            </div>
+            <footer>
+                <p class="links"><a onclick="goAbout()">About</a></p>
+                <p class="links"><a onclick="goFavorite()">Favorite Game</a></p>
+                <p class="links"><a onclick="goUpcoming()">Upcoming Games</a></p>
+                <p class="links"><a onclick="goCompleted()">Completed Games</a></p>
+                <p class="links"><a onclick="goVisitor()">Visitor</a></p>
+                <br>
+                <p>Designed by Bryce Barbee</p>
+                <p>Developed by Bryce Barbee</p>
+                <img src="img/logo2.png" width="100 px">
+                <h1>SGL</h1>
+            </footer>
+       </section>
+       <section class="upcoming-page" id="Upcoming">
+            <header>
+                <div class="screen-name">
+                    <img src="img/logo2.png" width="150 px" class="logo">
+                    <h1>Upcoming</h1>
+                    <h1>Games List</h1>
+                </div>
+                <nav>
+                    <h2>Upcoming List</h2>
+                    <div class="drop-menu" id="drop-menu-upcoming" onclick="doDrop('drop-items-upcoming')">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="drop-items" id="drop-items-upcoming">
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
+                        <li onclick="goTo('Visitor')">Visitor</li>
+                    </ul>
+                    <label class="switch">
+                        <input class="theme-button4" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </nav>
+            </header>
+            <div class="about-main">
+                <article class="upcoming-article">
+                    <h2>COMING SOON</h2>
+                </article>
+                <aside class="upcoming-aside">
+
+                </aside>
+            </div>
+            <footer>
+                <p class="links"><a onclick="goAbout()">About</a></p>
+                <p class="links"><a onclick="goFavorite()">Favorite Game</a></p>
+                <p class="links"><a onclick="goUpcoming()">Upcoming Games</a></p>
+                <p class="links"><a onclick="goCompleted()">Completed Games</a></p>
+                <p class="links"><a onclick="goVisitor()">Visitor</a></p>
+                <br>
+                <p>Designed by Bryce Barbee</p>
+                <p>Developed by Bryce Barbee</p>
+                <img src="img/logo2.png" width="100 px">
+                <h1>SGL</h1>
+            </footer>
+        </section>
+        <section class="completed-page" id="Completed">
+            <header>
+                <div class="screen-name">
+                    <img src="img/logo2.png" width="150 px" class="logo">
+                    <h1>Completed</h1>
+                    <h1>Games List</h1>
+                </div>
+                <nav>
+                    <h2>Completed List</h2>
+                    <div class="drop-menu" id="drop-menu-completed" onclick="doDrop('drop-items-completed')">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="drop-items" id="drop-items-completed">
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
+                        <li onclick="goTo('Visitor')">Visitor</li>
+                    </ul>
+                    <label class="switch">
+                        <input class="theme-button5" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </nav>
+            </header>
+            <div class="about-main">
+                <article class="completed-article">
+                    <h2>COMING SOON</h2>
+                </article>
+                <aside class="completed-aside">
+
+                </aside>
+            </div>
+            <footer>
+                <p class="links"><a onclick="goAbout()">About</a></p>
+                <p class="links"><a onclick="goFavorite()">Favorite Game</a></p>
+                <p class="links"><a onclick="goUpcoming()">Upcoming Games</a></p>
+                <p class="links"><a onclick="goCompleted()">Completed Games</a></p>
+                <p class="links"><a onclick="goVisitor()">Visitor</a></p>
+                <br>
+                <p>Designed by Bryce Barbee</p>
+                <p>Developed by Bryce Barbee</p>
+                <img src="img/logo2.png" width="100 px">
+                <h1>SGL</h1>
+            </footer>
+        </section>
+        <section class="visitor-page" id="Visitor">
+            <header>
+                <div class="screen-name">
+                    <img src="img/logo2.png" width="150 px" class="logo">
+                    <h1>Visitor</h1>
+                    <h1>Form</h1>
+                </div>
+                <nav>
+                    <h2>Visitor</h2>
+                    <div class="drop-menu" id="drop-menu-visitor" onclick="doDrop('drop-items-visitor')">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul class="drop-items" id="drop-items-visitor">
+                        <li onclick="goTo('Home')">Home</li>
+                        <li onclick="goTo('Favorite')">Favorite Game</li>
+                        <li onclick="goTo('Upcoming')">Upcoming Games</li>
+                        <li onclick="goTo('Completed')">Completed Games</li>
+                        <li onclick="goTo('About')">About</li>
+                        <li onclick="goTo('Visitor')">Visitor</li>
+                    </ul>
+                    <label class="switch">
+                        <input class="theme-button6" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </nav>
+            </header>
+            <div class="main-container">
+                <div id="success" class="successMsg" style="display:none">
+                  Thank you for logging your visit!
+                </div>
+                <form nonvalidate class="visitor-form" id="visitorForm" method="GET" action="https://wp.zybooks.com/form-viewer.php">
+                    <h3>Lets get your Info</h3>
+                    <br>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="first-name">First name</label>
+                        <input class="form-input" type="text" id="first-name" name="first-name" placeholder="Your First Name">
+                        <p class="error" id="first-name-error"></p>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="last-name">Last name</label>
+                        <input class="form-input" type="text" id="last-name" name="last-name" placeholder="Your Last Name">
+                        <p class="error" id="last-name-error"></p>
+                    </div> 
+                    <br>
+                    <h3>Current Address Info</h3>
+                    <br>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="address">Address</label>
+                        <input class="form-input" type="text" id="address" name="address" placeholder="Your Address">
+                        <p class="error" id="address-error"></p>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="city">City</label>
+                        <input class="form-input" type="text" id="city" name="city" placeholder="Your City">
+                        <p class="error" id="city-error"></p>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="state">State</label>
+                        <input class="form-input" type="text" id="state" name="state" placeholder="Your State" maxlength="2">
+                        <p class="error" id="state-error"></p>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="zip">Zip</label>
+                        <input class="form-input" type="text" id="zip" name="zip" placeholder="Your Zip">
+                        <p class="error" id="zip-error"></p>
+                    </div>
+                    <br>
+                    <h3>Contact Info</h3>
+                    <br>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="phone">PhoneNumber</label>
+                        <input class="form-input" type="text" id="phone" name="phone" placeholder="Your Phone Number">
+                        <p class="error" id="phone-error"></p>
+                    </div>
+                    <div class="input-wrapper">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="text" id="email" name="email" placeholder="Your Email">
+                        <p class="error" id="email-error"></p>
+                    </div>
+                    <br>
+                    <h3>How did you find us?</h3>
+                    <br>
+                    <div class="all-checks">
+                        <div class="check-wrapper">
+                            <input class="form-check-box" type="checkbox" id='google' name='find-page' value="google">
+                            <label class="cir" for="google"></label>
+                            <label class="non-cir" for="google">Google Search</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input class="form-check-box" type="checkbox" id='friend' name='find-page' value="friend">
+                            <label class="cir" for="friend"></label>
+                            <label class="non-cir" for="friend">Friend</label>
+                        </div>
+                        <div class="check-wrapper">
+                            <input class="form-check-box" type="checkbox" id='flyer' name='find-page' value="flyer">
+                            <label class="cir" for="flyer"></label>
+                            <label class="non-cir" for="flyer">Flyer</label>
+                            <p class="error" id="flyer-error"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="input-wrapper">
+                        <label class="label-text-area" for="comment">Leave a comment</label>
+                        <textarea class="text-area" rows="6" id="comment" placeholder="Your comments here"></textarea>
+                    </div>
+                    <br>
+                    <button class="submit-button" type="submit">Send</button>
+                </form>
+            <footer>
+                <p class="links"><a onclick="goAbout()">About</a></p>
+                <p class="links"><a onclick="goFavorite()">Favorite Game</a></p>
+                <p class="links"><a onclick="goUpcoming()">Upcoming Games</a></p>
+                <p class="links"><a onclick="goCompleted()">Completed Games</a></p>
+                <p class="links"><a onclick="goVisitor()">Visitor</a></p>
+                <br>
+                <p>Designed by Bryce Barbee</p>
+                <p>Developed by Bryce Barbee</p>
+                <img src="img/logo2.png" width="100 px">
+                <h1>SGL</h1>
+            </footer>
+        </section>
+        <script defer src="js/validation.js"></script>
+        <script defer src="js/myScript.js"></script>
+    </body>
+</html>

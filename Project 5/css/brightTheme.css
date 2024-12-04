@@ -1,0 +1,618 @@
+/*
+    Theme css moslty changes the layout for each of the pages
+    - changes the color theme
+    - changes the layout to grid for all the pages
+    - change the font and style for some content
+    - change the area and placement of navigation
+    - minimize page name
+    - made all the new them responsive for mobile
+*/
+body{
+    background-color: rgb(229, 225, 225);
+    background-image: none;
+}
+.home-page{
+    display: grid;
+    grid-template-columns: 20% auto auto ;
+    grid-template-rows: auto auto ;
+}
+.home-page .screen-name{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.home-page .screen-name h1{
+    font-size: 2rem;
+    font-family: Tahoe;
+    text-shadow: none;
+    color: black;
+}
+.home-page nav{
+    display: block;
+}
+.home-page nav h2{
+    display: none;
+}
+.drop-menu{
+    display: block;
+    margin-top: 2rem;
+}
+.drop-menu div{
+    width: 100%;
+    height: 8%;
+    margin-top: .5rem;
+    background-color: black;
+}
+.drop-items{
+    top: 20rem;
+    right: 80%
+}
+.switch{
+    margin: 2rem;
+}
+.home-page article{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-left: 2px solid black;
+    padding-left: 2rem;
+}
+.home-page article figure img{
+    height: 25rem;
+    position: absolute;
+    top: 8rem;
+    left: 36rem;
+}
+.home-page article div p{
+    font-family: Tahoe;
+    font-size: 3rem;
+    color: black;
+}
+.home-page article h2{
+    position: relative;
+    font-size: 4rem;
+    color: black;
+    font-family: Tahoe;
+}
+.home-page article h3{
+    position: relative;
+    font-size: 4rem;
+    color: rgb(9, 0, 0);
+    font-family: Tahoe;
+    border-top: 2px solid black;
+    border-image: linear-gradient(to right, #000 50%, transparent 50%) 100% 1;
+}
+.home-page footer{
+    display: none;
+}
+
+
+
+/* media general things for mobile devices */
+@media screen and (max-width: 450px){
+    .home-page{
+        grid-template-columns: 40% auto;
+    }
+    header{
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .home-page .screen-name h1{
+        font-size: 8rem;
+    }
+    nav{
+        display: block;
+        max-width: 80%;
+        min-width: 80%;
+    }
+    .drop-menu{
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+        min-width: 40%;
+        min-height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 2.5rem;
+        height: 40%;
+    }
+    .drop-menu div{
+        width: 100%;
+        height: 1rem;
+        background-color: black;
+    }
+    .switch{
+        width: 6.2rem;
+        height: 2.8rem;
+        margin: 4rem;
+        margin-top: 0;
+    }
+    .slider::before{
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    input:checked + .slider:before {
+        transform: translateX(3.4rem);
+    }
+    .drop-items{
+        position: absolute;
+        right: 55%;
+        top: 40%;
+    }
+    .drop-items li{
+        border-bottom: 2px solid black;
+        padding: .5rem;
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    .home-page article{
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .home-page article h3{
+        position: static;
+        margin-top: 6rem;
+        font-size: 4rem;
+    }
+    .home-page article h2{
+        position: static;
+        margin: 0;
+        font-size: 3.5rem;
+    }
+    .home-page figure{
+        display: none;
+        text-align: center;
+    }
+    .home-page article div p{
+        position: static;
+        margin-top: 5rem;
+        font-size: 5rem;
+    }
+    .home-page article div{
+        margin: 0;
+    }
+}
+
+
+
+.favorite-page{
+    display: grid;
+    grid-template-columns: 20% auto 20% ;
+    grid-template-rows: auto auto ;
+}
+.favorite-page .screen-name{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.favorite-page .screen-name h1{
+    font-size: 2rem;
+    font-family: Tahoe;
+    text-shadow: none;
+    color: black;
+}
+.favorite-page nav{
+    display: block;
+}
+.favorite-page nav h2{
+    display: none;
+}
+.favorite-page article{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-left: 2px solid black;
+    padding-left: 2rem;
+}
+.favorite-page article h2{
+    position: relative;
+    font-size: 4rem;
+    color: black;
+    font-family: Tahoe;
+    top: 2rem;
+}
+.favorite-page article iframe{
+    width: 100%;
+}
+.favorite-page .cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    width: 100%;
+    margin: 1rem;
+    padding: 1rem;
+}
+.favorite-page .info-card{
+    display: block;
+    max-width: 80%;
+    height: auto;
+}
+.favorite-page .runner-up{
+    display: block;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 2rem;
+    border-left: 2px solid black;
+    margin: 2rem;
+}
+.favorite-page .runner-up h2{
+    font-size: 4rem;
+    color: black;
+    font-family: Tahoe;
+}
+.favorite-page .runner-up iframe{
+    width: 100%;
+}
+.favorite-page footer{
+    display: none;
+}
+
+
+
+/* media general things for mobile devices */
+@media screen and (max-width: 450px){
+    .favorite-page{
+        grid-template-columns: 40% auto;
+        grid-template-rows: auto auto auto;
+    }
+    .favorite-page .screen-name h1{
+        font-size: 8rem;
+    }
+    .favorite-page article{
+        position: static;
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 90%;
+        margin-bottom: 0;
+    }
+    .favorite-page article h2{
+        font-size: 3rem;
+    }
+    .favorite-page .cards{
+        position: static;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 50%;
+        border-left: 2px solid black;
+        margin-left: 2rem;
+        padding-left: 2rem;
+        flex-wrap:nowrap;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .favorite-page .runner-up{
+        position: static;
+        display: block;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 90%;
+        margin-top: 0;
+    }
+    .favorite-page .runner-up h2{
+        font-size: 3rem;
+        margin-top: 1rem;
+    }
+}
+
+
+.about-page{
+    display: grid;
+    grid-template-columns: 20% auto ;
+    grid-template-rows: auto auto ;
+}
+.about-page .screen-name{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.about-page .screen-name h1{
+    font-size: 2rem;
+    font-family: Tahoe;
+    text-shadow: none;
+    color: black;
+}
+.about-page nav{
+    display: block;
+}
+.about-page nav h2{
+    display: none;
+}
+.about-page .about-main{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-left: 2px solid black;
+}
+.about-page .about-main .about-article{
+    width: 100%;
+}
+.about-page .about-main h2{
+    color: black;
+    font-family: tahoma;
+}
+.about-page .about-main .about-article p{
+    color: black;
+    font-family: tahoma;
+}
+.about-page .about-main .about-aside{
+    display: flex;
+    flex-wrap: wrap;
+}
+.slide {
+    display: none;
+    height: auto;
+}
+.about-page footer{
+    display: none;
+}
+
+
+/* media general things for mobile devices */
+@media screen and (max-width: 450px){
+    .about-page{
+        grid-template-columns: 25% auto;
+    }
+    .about-page .screen-name h1{
+        font-size: 6rem;
+    }
+    .about-page article{
+        position: static;
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 100%;
+        margin-bottom: 0;
+    }
+    .about-page .about-aside .malenia{
+        max-width: 30rem;
+    }
+}
+
+
+
+.upcoming-page{
+    display: grid;
+    grid-template-columns: 20% auto ;
+    grid-template-rows: auto auto ;
+}
+.upcoming-page .screen-name{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.upcoming-page .screen-name h1{
+    font-size: 2rem;
+    font-family: Tahoe;
+    text-shadow: none;
+    color: black;
+}
+.upcoming-page nav{
+    display: block;
+}
+.upcoming-page nav h2{
+    display: none;
+}
+.upcoming-page article{
+    border-left: 2px solid black;
+    padding: 2rem;
+}
+.upcoming-page article h2{
+    color: black;
+    font-family: tahoma;
+}
+.upcoming-page footer{
+    display: none;
+}
+
+
+.completed-page{
+    display: grid;
+    grid-template-columns: 20% auto ;
+    grid-template-rows: auto auto ;
+}
+.completed-page .screen-name{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.completed-page .screen-name h1{
+    font-size: 2rem;
+    font-family: Tahoe;
+    text-shadow: none;
+    color: black;
+}
+.completed-page nav{
+    display: block;
+}
+.completed-page nav h2{
+    display: none;
+}
+.completed-page article{
+    border-left: 2px solid black;
+    padding: 2rem;
+}
+.completed-page article h2{
+    color: black;
+    font-family: tahoma;
+}
+.completed-page footer{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 450px){
+    .upcoming-page{
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 100%;
+    }
+    .upcoming-page header{
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .upcoming-page .screen-name h1{
+        font-size: 8rem;
+    }
+    .upcoming-page article{
+        position: static;
+        display: block;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 100%;
+        margin: 0;
+        overflow:visible;
+    }
+    .upcoming-page .about-main article h2{
+        font-size: 5.5rem;
+    }
+
+
+    .completed-page{
+        grid-template-columns: 40% 60%;
+        grid-template-rows: 100%;
+    }
+    .completed-page header{
+        display: block;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .completed-page .screen-name h1{
+        font-size: 8rem;
+    }
+    .completed-page article{
+        position: static;
+        display: block;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 100%;
+        margin: 0;
+        overflow:visible;
+    }
+    .completed-page .about-main article h2{
+        font-size: 5.5rem;
+    }
+}
+
+
+
+.visitor-page{
+    display: grid;
+    grid-template-columns: 20% auto ;
+    grid-template-rows: auto auto ;
+}
+.visitor-page .screen-name{
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.visitor-page .screen-name h1{
+    font-size: 2rem;
+    font-family: Tahoe;
+    text-shadow: none;
+    color: black;
+}
+.visitor-page nav{
+    display: block;
+}
+.visitor-page nav h2{
+    display: none;
+}
+.visitor-page .main-container{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    border-left: 2px solid black;
+    margin: 1rem;
+}
+.visitor-page .visitor-form{
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    border: 3px solid rgb(156, 156, 156);
+}
+.input-wrapper{
+    position: relative;
+}
+.visitor-page .form-input {
+    display: inline-block;
+    border: 3px solid rgb(156, 156, 156);
+    background-color: rgb(255, 255, 255);
+    color: black;
+    margin: .3em;
+}
+.visitor-page .form-label {
+    position: absolute;
+    left: 10em;
+    padding: 0 5px;
+    font-size:1.2em;
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+.visitor-page .visitor-form h3{
+    font-size: 2rem;
+    color: black
+}
+.visitor-page .check-wrapper .non-cir{
+    color: black;
+  
+}
+.text-area{
+    border: 3px solid rgb(156, 156, 156);
+  }
+  .label-text-area{
+    top: -0.6em;
+    left: 4em;
+    color: black;
+  }
+  .submit-button{
+    border: 3px solid rgb(156, 156, 156);
+  }
+.visitor-page footer{
+    display: none;
+}
